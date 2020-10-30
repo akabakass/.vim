@@ -30,7 +30,7 @@ set expandtab
 " allow recrusive sub-folder search 
 set path+=**
 
-colorscheme vim-monokai-tasty
+silent colorscheme vim-monokai-tasty
 """""""""
 " remap "
 """""""""
