@@ -4,9 +4,9 @@ source $VIMRUNTIME/defaults.vim
 """""""""""
 " plugins "
 """""""""""
-
 call plug#begin('~/.vim/plug')
 Plug 'patstockwell/vim-monokai-tasty'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 """"""""""
@@ -31,6 +31,7 @@ set expandtab
 set path+=**
 
 silent! colorscheme vim-monokai-tasty
+
 """""""""
 " remap "
 """""""""
