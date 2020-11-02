@@ -27,6 +27,7 @@ syntax on
 """""""""""""""""""""
 set encoding=utf-8
 set clipboard=unnamedplus
+set tabstop=2
 set number
 set relativenumber
 set hidden
