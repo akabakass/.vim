@@ -7,6 +7,11 @@ source $VIMRUNTIME/defaults.vim
 call plug#begin('~/.vim/plug')
 Plug 'patstockwell/vim-monokai-tasty'
 Plug 'tpope/vim-surround'
+if has('nvim') || has('patch-8.0.902')
+  Plug 'mhinz/vim-signify'
+else
+  Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
+endif
 call plug#end()
 
 """"""""""
