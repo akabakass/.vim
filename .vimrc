@@ -29,8 +29,7 @@ set encoding=utf-8
 set clipboard=unnamedplus
 set number
 set relativenumber
-set shiftwidth=2
-set expandtab
+set hidden
 
 " allow recrusive sub-folder search 
 set path+=**
@@ -59,6 +58,9 @@ endfunction
 inoremap <Tab> <C-R>=CleverTab(1)<CR>
 inoremap <S-Tab> <C-R>=CleverTab(0)<CR>
 inoremap jk <Esc>
+
+nmap gj <plug>(signify-next-hunk)
+nmap gk <plug>(signify-prev-hunk)
 """"""""""""""""""""""""""
 " file explorer settings "
 """"""""""""""""""""""""""
