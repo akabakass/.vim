@@ -12,6 +12,8 @@ if has('nvim') || has('patch-8.0.902')
 else
   Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
 endif
+Plug 'neoclide/coc.nvim'
+Plug 'wakatime/vim-wakatime'
 call plug#end()
 
 """"""""""
@@ -27,10 +29,17 @@ syntax on
 """""""""""""""""""""
 set encoding=utf-8
 set clipboard=unnamedplus
-set tabstop=2
 set number
 set relativenumber
 set hidden
+set whichwrap+=h,l
+
+" indentation
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set autoindent
 
 " allow recrusive sub-folder search 
 set path+=**
