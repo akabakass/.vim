@@ -14,6 +14,7 @@ else
 endif
 Plug 'neoclide/coc.nvim'
 Plug 'wakatime/vim-wakatime'
+Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 
 """"""""""
@@ -71,6 +72,7 @@ inoremap jk <Esc>
 
 nmap gj <plug>(signify-next-hunk)
 nmap gk <plug>(signify-prev-hunk)
+
 """"""""""""""""""""""""""
 " file explorer settings "
 """"""""""""""""""""""""""
