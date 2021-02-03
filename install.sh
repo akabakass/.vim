@@ -1,6 +1,10 @@
 #!/bin/bash
 echo "---> installing vim-gtk"
-#sudo apt update && sudo apt install vim-gtk git
+sudo apt update 
+sudo apt install -y vim-gtk
+
+echo "---> installing curl"
+sudo apt install -y curl
 
 echo "---> linking .vimrc"
 if [ -f ~/.vimrc ]; then
