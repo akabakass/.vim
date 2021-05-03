@@ -16,7 +16,10 @@ Plug 'neoclide/coc.nvim'
 Plug 'wakatime/vim-wakatime'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'ronakg/quickr-preview.vim'
+Plug 'mattn/emmet-vim'
 call plug#end()
+
+let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-phpls', 'coc-html', 'coc-tsserver', 'coc-emmet', 'coc-highlight', 'coc-pairs']
 
 """"""""""
 " module "
@@ -35,6 +38,9 @@ set number
 set relativenumber
 set hidden
 set whichwrap+=h,l
+set mouse=a
+set wildmode=longest:full,full
+set wildmenu
 
 " indentation
 set tabstop=2

@@ -6,6 +6,9 @@ sudo apt install -y vim-gtk
 echo "---> installing curl"
 sudo apt install -y curl
 
+echo "---> installing npm for coc intelephense"
+sudo apt install -y npm
+
 echo "---> linking .vimrc"
 if [ -f ~/.vimrc ]; then
   read -p '.vimrc exist, would you like to replace it? [Ny]' replace
@@ -21,4 +24,3 @@ fi
 echo "---> installing vim-plug"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 vim +'PlugInstall' +qa
-
