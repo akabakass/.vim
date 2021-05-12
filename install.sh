@@ -1,7 +1,7 @@
 #!/bin/bash
-echo "---> installing vim-gtk"
+echo "---> installing vim"
 sudo apt update 
-sudo apt install -y vim-gtk
+sudo apt install -y vim
 
 echo "---> installing curl"
 sudo apt install -y curl
@@ -23,10 +23,12 @@ fi
 
 read -p 'Would you like to install personal stuff (like wakatime, usually not on a server)? [Ny]' personal
 if [[ $personal =~ [yY] ]];then
-  git pull
+  cat > personal.vim << EOM
+call plug#begin('~/.vim/plug')
+  Plug 'wakatime/vim-wakatime'
+call plug#end()
+EOM
   echo 'source personal.vim' >> .vimrc
-else
-  rm personal.vim
 fi
 
 echo "---> installing vim-plug"
