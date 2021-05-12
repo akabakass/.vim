@@ -6,7 +6,7 @@ sudo apt install -y vim-gtk
 echo "---> installing curl"
 sudo apt install -y curl
 
-echo "---> installing npm for coc intelephense"
+echo "---> installing npm for coc"
 sudo apt install -y npm
 
 echo "---> linking .vimrc"
@@ -19,6 +19,14 @@ if [ -f ~/.vimrc ]; then
   fi
 else
   ln -s ~/.vim/.vimrc ~/.vimrc
+fi
+
+read -p 'Would you like to install personal stuff (like wakatime)? [Ny]' personal
+if [[ $personal =~ [yY] ]];then
+  git pull
+  echo 'source personal.vim' >> .vimrc
+else
+  rm personal.vim
 fi
 
 echo "---> installing vim-plug"

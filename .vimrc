@@ -13,9 +13,7 @@ else
   Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
 endif
 Plug 'neoclide/coc.nvim'
-Plug 'wakatime/vim-wakatime'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'ronakg/quickr-preview.vim'
 Plug 'mattn/emmet-vim'
 call plug#end()
 
@@ -68,11 +66,6 @@ endfunction
 
 nnoremap à :call Jump_tag()<CR>
 
-let g:quickr_preview_keymaps = 0
-let g:quickr_preview_position = 'above'
-let g:quickr_preview_on_cursor = 1
-let g:quickr_preview_exit_on_enter = 1
-
 " insert mode
 function! CleverTab(forward)
    if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
@@ -100,3 +93,5 @@ let g:netrw_banner=0
 let g:netrw_liststyle=3
 let g:netrw_altv=1
 let g:netrw_browse_split=4
+
+
