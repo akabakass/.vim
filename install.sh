@@ -21,7 +21,7 @@ else
   ln -s ~/.vim/.vimrc ~/.vimrc
 fi
 
-read -p 'Would you like to install personal stuff (like wakatime)? [Ny]' personal
+read -p 'Would you like to install personal stuff (like wakatime, usually not on a server)? [Ny]' personal
 if [[ $personal =~ [yY] ]];then
   git pull
   echo 'source personal.vim' >> .vimrc
