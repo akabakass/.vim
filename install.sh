@@ -1,17 +1,20 @@
 #!/bin/bash
-echo "---> installing vim"
-sudo apt update 
-sudo apt install -y vim
+read -p 'Would you like to install vim and dependencies?' install
+if [[ $install =~ [yY] ]];then
+  echo "---> installing vim"
+  sudo apt update 
+  sudo apt install -y vim
 
-echo "---> installing curl"
-sudo apt install -y curl
+  echo "---> installing curl"
+  sudo apt install -y curl
 
-echo "---> installing npm for coc"
-sudo apt install -y npm
+  echo "---> installing npm for coc"
+  sudo apt install -y npm
+fi
 
-echo "---> linking .vimrc"
 if [ -f ~/.vimrc ]; then
   read -p '.vimrc exist, would you like to replace it? [Ny]' replace
+  echo "---> linking .vimrc"
   if [[ $replace =~ [yY] ]];then
     echo "---> replacing .vimrc"
     rm ~/.vimrc
