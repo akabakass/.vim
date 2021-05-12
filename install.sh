@@ -1,5 +1,5 @@
 #!/bin/bash
-read -p 'Would you like to install vim and dependencies?' install
+read -p 'Would you like to install vim and dependencies? [Ny]' install
 if [[ $install =~ [yY] ]];then
   echo "---> installing vim"
   sudo apt update 
