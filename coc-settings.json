@@ -1,3 +1,5 @@
 {
-	"intelephense.diagnostics.undefinedConstants": false
+	"intelephense.diagnostics.undefinedConstants": false,
+  "css.lint.duplicateProperties": "warning",
+  "css.lint.idSelector": "warning"
 }

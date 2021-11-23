@@ -17,9 +17,15 @@ Plug 'wakatime/vim-wakatime'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'ronakg/quickr-preview.vim'
 Plug 'mattn/emmet-vim'
+Plug 'simeji/winresizer' 
+Plug 'moll/vim-bbye'
+Plug 'simnalamburt/vim-mundo'
+Plug 'tpope/vim-dadbod'
+Plug 'kristijanhusak/vim-dadbod-ui'
+Plug 'vim-vdebug/vdebug'
 call plug#end()
 
-let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-phpls', 'coc-html', 'coc-tsserver', 'coc-emmet', 'coc-highlight', 'coc-pairs']
+let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-phpls', 'coc-html', 'coc-tsserver', 'coc-emmet', 'coc-highlight', 'coc-pairs', 'coc-css', 'coc-calc', 'coc-xml']
 
 """"""""""
 " module "
@@ -41,6 +47,10 @@ set whichwrap+=h,l
 set mouse=a
 set wildmode=longest:full,full
 set wildmenu
+set undofile
+set undodir=~/.vim/undo
+set undolevels=10000
+set splitright
 
 " indentation
 set tabstop=2
@@ -53,6 +63,13 @@ set autoindent
 set path+=**
 
 silent! colorscheme vim-monokai-tasty
+
+
+if !exists('g:vdebug_options')
+  let g:vdebug_options = {}
+endif
+let g:vdebug_options.break_on_open = 0
+let g:vdebug_options.watch_window_style = 'compact'
 
 """""""""
 " remap "
@@ -87,10 +104,17 @@ function! CleverTab(forward)
 endfunction
 inoremap <Tab> <C-R>=CleverTab(1)<CR>
 inoremap <S-Tab> <C-R>=CleverTab(0)<CR>
-inoremap jk <Esc>
 
 nmap gj <plug>(signify-next-hunk)
 nmap gk <plug>(signify-prev-hunk)
+
+
+noremap U :MundoToggle<CR>
+
+let g:mundo_preview_bottom = 1
+let g:mundo_right = 1
+
+let g:dbs = {"tubs" : "mysql://jc:@localhost/tubs"}
 
 """"""""""""""""""""""""""
 " file explorer settings "
