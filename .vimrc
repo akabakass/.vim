@@ -19,8 +19,13 @@ Plug 'simeji/winresizer'
 Plug 'moll/vim-bbye'
 Plug 'simnalamburt/vim-mundo'
 Plug 'tpope/vim-dadbod'
+Plug 'tpope/vim-commentary'
 Plug 'kristijanhusak/vim-dadbod-ui'
 Plug 'vim-vdebug/vdebug'
+Plug 'RRethy/vim-hexokinase'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'itchyny/lightline.vim'
 call plug#end()
 
 let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-phpls', 'coc-html', 'coc-tsserver', 'coc-emmet', 'coc-highlight', 'coc-pairs', 'coc-css', 'coc-calc', 'coc-xml']
@@ -62,6 +67,10 @@ set path+=**
 
 silent! colorscheme vim-monokai-tasty
 
+set laststatus=2
+set statusline+=%{gutentags#statusline()}
+
+let g:lightline = {'colorscheme': 'molokai'}
 
 if !exists('g:vdebug_options')
   let g:vdebug_options = {}
@@ -69,6 +78,7 @@ endif
 let g:vdebug_options.break_on_open = 0
 let g:vdebug_options.watch_window_style = 'compact'
 
+let g:Hexokinase_highlighters = ['foreground']
 """""""""
 " remap "
 """""""""
